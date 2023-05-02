@@ -6,7 +6,10 @@ const DataTable = () => {
 
   const fetchSensorData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/get-data');
+      const response = await fetch('/api/get-data');
+        {/*const startTime = '2023-05-01T00:00:00Z';
+          const endTime = '2023-05-02T00:00:00Z';( these will be the values the user enters and the APU will fetch the data  accordingly)
+fetch(`/api/get-data-range?startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}`)*/}
       const results = await response.json();
       results.data = results.data.reverse();
       setSensorData(results);

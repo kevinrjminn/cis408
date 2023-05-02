@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, Label } from 'recharts';
 import { Container, Grid, Typography, Card, CardContent } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
 const Dashboard = () => {
     const [sensorData, setSensorData] = useState([]);
 
     const fetchSensorData = async () => {
         try {
-            const response = await fetch('http://localhost:3001/api/get-data');
+            const response = await fetch('/api/get-data');
             const result = await response.json();
             if (response.status === 200) {
                 setSensorData(result.data.map(item => ({
