@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, Label } from 'recharts';
 import { Container, Grid, Typography, Card, CardContent } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
 const Dashboard = () => {
     const [sensorData, setSensorData] = useState([]);
 
-
-    //convert the following: http://localhost:3001/api/get-dataf (array) to json.
     const fetchSensorData = async () => {
         try {
-            const response = await fetch('/api/get-data');
+            const response = await fetch('http://localhost:3001/api/get-data');
             const result = await response.json();
             if (response.status === 200) {
                 setSensorData(result.data.map(item => ({
@@ -26,6 +25,7 @@ const Dashboard = () => {
             console.error('Error:', error);
         }
     };
+    
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -105,26 +105,26 @@ const Dashboard = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card>
-                        <CardContent>
-                            <Typography variant="h6">Temperature</Typography>
-                            <ResponsiveContainer width="100%" height={200} style={{ backgroundColor: 'red' }}>
-                                <LineChart data={sensorData}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
-                                    <XAxis dataKey="timestamp" stroke="#666">
-                                        <Label value="Time" position="insideBottom" offset={-5} />
-                                    </XAxis>
-                                    <YAxis stroke="#666">
-                                        <Label value="temperature" position="insideLeft" angle={-90} />
-                                    </YAxis>
-                                    <Tooltip />
-                                    <Legend />
-                                    <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
-                                </LineChart>
-                            </ResponsiveContainer>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                   <Card>
+                       <CardContent>
+                             <Typography variant="h6">Temperature</Typography>
+                                <ResponsiveContainer width="100%" height={200} style={{ backgroundColor: 'red' }}>
+                                 <LineChart data={sensorData}>
+                                     <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
+                                     <XAxis dataKey="timestamp" stroke="#666">
+                                         <Label value="Time" position="insideBottom" offset={-5} />
+                                     </XAxis>
+                                     <YAxis stroke="#666">
+                                         <Label value="temperature" position="insideLeft" angle={-90} />
+                                     </YAxis>
+                                     <Tooltip />
+                                     <Legend />
+                                     <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
+                                 </LineChart>
+                             </ResponsiveContainer>
+                         </CardContent>
+                     </Card>
+                 </Grid>
             </Grid>
         </Container>
     );
