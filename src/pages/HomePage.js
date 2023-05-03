@@ -12,7 +12,7 @@ const HomePage = () => {
                         <iframe
                             width="560"
                             height="315"
-                            src="https://www.youtube.com/embed/6udSInwofSU?start=9&end=300&autoplay=1&loop=1&playlist=6udSInwofSU&mute=1&playsinline=1?controls=0&modestbranding=1&iv_load_policy=3"
+                            src="https://www.youtube.com/embed/6udSInwofSU?start=10&end=300&autoplay=1&loop=1&playlist=6udSInwofSU&mute=1&playsinline=1?controls=0&modestbranding=1&iv_load_policy=3"
                             title="video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
