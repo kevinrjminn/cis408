@@ -48,6 +48,15 @@ const HomePage = () => {
                     </div>
                 </Container>
             </div>
+            <div className={styles.card}>
+                <Container maxWidth="md">
+                    <div className={styles.cardContent}>
+                        <h2 className={styles.cardTitle}>Data Transfer & IoT Integration</h2>
+                        <p className={styles.description}>
+                            Our web application is engineered to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data packets. This offers the utmost flexibility and customization to cater to your unique requirements.                        </p>
+                    </div>
+                </Container>
+            </div>
             <div className={styles.sponsors} style={{ marginTop: "2rem" }}>
                 <Container maxWidth="md">
                     <h2 className={styles.sponsorsTitle}>Our Sponsors</h2>
@@ -63,7 +72,6 @@ const HomePage = () => {
             <div className={styles.footer}>
                 <Container maxWidth="md">
                     <p className={styles.footerText}>
-                        {/*© 2023 Hydroponic System. All rights reserved.*/}
                     </p>
                 </Container>
             </div>

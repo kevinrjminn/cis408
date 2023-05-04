@@ -1,11 +1,14 @@
 import React from 'react';
-import { Grid, Card, CardContent, Typography } from '@mui/material';
+// import { Grid, Card, CardContent, Typography } from '@mui/material';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label } from 'recharts';
+import { Grid, Card, CardContent, Typography, useMediaQuery } from '@mui/material';
 
 const SensorCards = ({ sensorData }) => {
+    const isLargeScreen = useMediaQuery('(min-width:750)');
+
     return (
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={4}>
+        <Grid container spacing={4}>
+            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Humidity</Typography>
@@ -26,7 +29,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">pH Level</Typography>
@@ -47,7 +50,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Nutrient Level</Typography>
@@ -68,7 +71,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Temperature</Typography>
@@ -79,7 +82,7 @@ const SensorCards = ({ sensorData }) => {
                                     <Label value="Time" position="insideBottom" offset={-5}/>
                                 </XAxis>
                                 <YAxis stroke="#666">
-                                    <Label value="temperature" position="insideLeft" angle={-90}/>
+                                    <Label value="°C" position="insideLeft" angle={-90}/>
                                 </YAxis>
                                 <Tooltip/>
                                 <Legend/>

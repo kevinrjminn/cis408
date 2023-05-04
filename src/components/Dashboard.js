@@ -41,7 +41,7 @@ const Dashboard = () => {
     return (
         <Container>
             <Sidebar />
-            <Box sx={{ paddingTop:'66px',paddingLeft: '64px', display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Update paddingLeft value to match drawerWidth */}
+            <Box sx={{ paddingTop:'66px',paddingLeft: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Update paddingLeft value to match drawerWidth */}
                 <Typography variant="h4" align="center" gutterBottom>
                     Hydroponic Monitoring Dashboard
                 </Typography>
@@ -62,7 +62,7 @@ const Dashboard = () => {
 
                 <Box mt={4} flexGrow={1}>
                     <DataTable />
-                </Box>
+                    </Box>
 
 
             </Box>
