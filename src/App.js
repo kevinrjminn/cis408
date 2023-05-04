@@ -17,6 +17,7 @@ const AppContent = () => {
                         {/* Add routes for different pages */}
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="/dashboard" element={<Dashboard />} />
+
                         <Route path="/team-info" element={<TeamInfoPage />} />
                         {/* ... other routes */}
                     </Routes>
