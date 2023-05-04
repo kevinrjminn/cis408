@@ -3,6 +3,7 @@ import styles from "../styles/HomePage.module.css";
 import Container from "@mui/material/Container";
 import rockwellLogo from "../assets/images/rockwell.png";
 import macImage from "../assets/images/mac.png";
+import {Grid} from "@mui/material";
 
 
 const HomePage = () => {
@@ -30,6 +31,9 @@ const HomePage = () => {
                     </div>
                 </Container>
             </div>
+
+            <hr/>
+
             <div className={styles.card}>
                 <Container maxWidth="md">
                     <div className={styles.cardContent}>
@@ -50,19 +54,51 @@ const HomePage = () => {
                     </div>
                 </Container>
             </div>
+
+            <hr/>
+
             <div className={styles.card}>
                 <Container maxWidth="md">
                     <div className={styles.cardContent}>
                         <h2 className={styles.cardTitle}>Data Transfer & IoT Integration</h2>
                         <p className={styles.description}>
-                            Our web application is designed to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data packets. This offers the utmost flexibility and customization to cater to your unique requirements.                        </p>
+                            Our web application is designed to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data. This enables flexibility and customization to cater to your unique requirements.                        </p>
                         <img src={'macImage'} alt="Mac" className={styles.macImage} /> {
 
                     }
 
                     </div>
                 </Container>
+
+
             </div>
+
+            <hr/>
+
+            <div className={styles.newSection}>
+                <Container maxWidth="md">
+                    <h2 className={styles.newSectionTitle}></h2>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} md={6}>
+                            <div className={styles.newSectionContentLeft}>
+                                <h3 className={styles.containerTitle}>Advance IOT
+                                    Cloud Platform</h3>
+                                <p>Data from Sensors can be send to any Cloud IOT Applications via API/MQTT Protocols.</p>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <div className={styles.newSectionContentRight}>
+                                <h3 className={styles.containerTitle}>Mobile and Web
+                                    Enable Control</h3>
+                                <p>Data and configuration can be accessible via Mobile and web Enable application. </p>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
+
+            <hr/>
+
             <div className={styles.sponsors} style={{ marginTop: "2rem" }}>
                 <Container maxWidth="md">
                     <h2 className={styles.sponsorsTitle}>Our Sponsors</h2>

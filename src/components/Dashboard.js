@@ -42,15 +42,17 @@ const Dashboard = () => {
     return (
         <Container maxWidth={isLargeScreen ? false : 'lg'}>
             {/*<Sidebar />*/}
-            <Box sx={{ paddingTop:'66px',paddingLeft: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Update paddingLeft value to match drawerWidth */}
+            <Box sx={{ paddingTop:'66px',paddingLeft: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}> {}
                 <Typography variant="h4" align="center" gutterBottom>
                     Hydroponic Monitoring Dashboard
                 </Typography>
+
+
+                <SensorCards sensorData={sensorData} />
+                <hr/>
                 {sensorData.length > 0 && (
                     <Alerts latestData={sensorData[sensorData.length - 1]} />
                 )}
-
-                <SensorCards sensorData={sensorData} />
                 <hr/>
                 <Box mt={4} flexGrow={1}>
                     <Typography variant="h6" align="center" gutterBottom>

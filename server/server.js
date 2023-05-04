@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '', // Your MySQL password
+    password: '',
     database: 'sensor_data',
 });
 
