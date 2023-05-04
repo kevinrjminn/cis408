@@ -1,44 +1,69 @@
-// src/pages/TeamInfoPage.js
-import React from 'react';
-import { Container, Typography, Grid, Box, Card, CardContent } from '@mui/material';
+import React from "react";
+import styles from "../styles/TeamInfo.module.css";
+import Container from "@mui/material/Container";
+import { Grid, Paper, Typography } from "@mui/material";
 
-const teamMembers = [
-    {
-        name: 'John Doe',
-        role: 'Team Lead',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        name: 'Jane Smith',
-        role: 'Developer',
-        image: 'https://via.placeholder.com/150',
-    },
-    // Add more team members as needed
-];
-
-const TeamInfoPage = () => {
+const TeamInfo = () => {
     return (
-        <Container>
-            <Typography variant="h4" align="center" gutterBottom>
-                Team Information
-            </Typography>
-            <Grid container spacing={3}>
-                {teamMembers.map((member, index) => (
-                    <Grid key={index} item xs={12} sm={6} md={4}>
-                        <Card>
-                            <CardContent>
-                                <Box sx={{ textAlign: 'center' }}>
-                                    <img src={member.image} alt={member.name} width="150" />
-                                    <Typography variant="h6">{member.name}</Typography>
-                                    <Typography variant="subtitle1">{member.role}</Typography>
-                                </Box>
-                            </CardContent>
-                        </Card>
+        <div className={styles.teamInfo}>
+            <Container maxWidth="md">
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title}>Our Team</h1>
+                    <h2 className={styles.subtitle}>
+                        Meet the talented individuals behind our project
+                    </h2>
+                </div>
+                <Grid container spacing={3}>
+                    <Grid item xs={12} md={6}>
+                        <Paper className={styles.paper}>
+                            <div className={styles.avatarContainer}>
+                                <img
+                                    src="https://via.placeholder.com/150"
+                                    alt="avatar"
+                                    className={styles.avatar}
+                                />
+                            </div>
+                            <Typography variant="h5" className={styles.name}>
+                                John Doe
+                            </Typography>
+                            <Typography variant="h6" className={styles.position}>
+                                Mechanical Engineer
+                            </Typography>
+                            <Typography className={styles.description}>
+                                John is a mechanical engineer who specializes in designing and
+                                building complex systems. He brings a wealth of experience and
+                                knowledge to our team and is an integral part of our project's
+                                success.
+                            </Typography>
+                        </Paper>
                     </Grid>
-                ))}
-            </Grid>
-        </Container>
+                    <Grid item xs={12} md={6}>
+                        <Paper className={styles.paper}>
+                            <div className={styles.avatarContainer}>
+                                <img
+                                    src="https://via.placeholder.com/150"
+                                    alt="avatar"
+                                    className={styles.avatar}
+                                />
+                            </div>
+                            <Typography variant="h5" className={styles.name}>
+                                Jane Smith
+                            </Typography>
+                            <Typography variant="h6" className={styles.position}>
+                                Electrical Engineer
+                            </Typography>
+                            <Typography className={styles.description}>
+                                Jane is an electrical engineer who specializes in designing and
+                                optimizing electrical systems. She is a crucial member of our
+                                team and has contributed significantly to our project's
+                                development.
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Container>
+        </div>
     );
 };
 
-export default TeamInfoPage;
+export default TeamInfo;

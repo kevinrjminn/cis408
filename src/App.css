@@ -1,20 +1,9 @@
 .App {
   text-align: center;
 }
-.App {
-  text-align: center;
-}
 
 .content {
   padding-top: 0px;
-}
-
-.appbar-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030;
 }
 
 .App-logo {
@@ -36,8 +25,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #6a6d6b;
   height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
 }
 
 .App-link {
@@ -52,5 +46,3 @@
     transform: rotate(360deg);
   }
 }
-
-

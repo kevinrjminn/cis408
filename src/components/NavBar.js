@@ -7,14 +7,20 @@ const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Dashboard', path: '/dashboard' },
     { name: 'About', path: '#' },
-    // { name: 'Team Info', path: '/team-info' } // Update path here
+    { name: 'Team Info', path: '/team-info' }
 ];
 
 function NavBar() {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <Navbar expand="md" bg="dark" variant="dark" expanded={expanded}>
+        <Navbar
+            expand="md"
+            bg="dark"
+            variant="dark"
+            fixed="top"
+            expanded={expanded}
+        >
             <Container>
                 <Navbar.Brand>
                     <RouterLink to="/" onClick={() => setExpanded(false)}>
