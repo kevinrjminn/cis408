@@ -3,7 +3,6 @@ import { Container, Typography, Box } from '@mui/material';
 import Alerts from './Alerts';
 import DataTable from './DataTable';
 import SensorCards from './SensorCards';
-import Sidebar from './Sidebar';
 import PlantProgress from './PlantProgress';
 import { useMediaQuery } from '@mui/material';
 const Dashboard = () => {
@@ -62,9 +61,11 @@ const Dashboard = () => {
                 </Box>
                 <hr/>
 
-                <Box mt={4} flexGrow={1}>
+                <center><Box mt={4} flexGrow={1}>
+                    <h3>Data Table</h3>
                     <DataTable />
                 </Box>
+                </center>
 
             </Box>
         </Container>
@@ -72,3 +73,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
