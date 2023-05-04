@@ -5,9 +5,10 @@ import DataTable from './DataTable';
 import SensorCards from './SensorCards';
 import Sidebar from './Sidebar';
 import PlantProgress from './PlantProgress';
-
-
+import { useMediaQuery } from '@mui/material';
 const Dashboard = () => {
+    const isLargeScreen = useMediaQuery('(min-width:900px)');
+
     const [sensorData, setSensorData] = useState([]);
 
     const fetchSensorData = async () => {
@@ -39,7 +40,7 @@ const Dashboard = () => {
         return () => clearInterval(intervalId);
     }, []);
     return (
-        <Container>
+        <Container maxWidth={isLargeScreen ? false : 'lg'}>
             <Sidebar />
             <Box sx={{ paddingTop:'66px',paddingLeft: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Update paddingLeft value to match drawerWidth */}
                 <Typography variant="h4" align="center" gutterBottom>
@@ -49,7 +50,6 @@ const Dashboard = () => {
                     <Alerts latestData={sensorData[sensorData.length - 1]} />
                 )}
 
-
                 <SensorCards sensorData={sensorData} />
                 <hr/>
                 <Box mt={4} flexGrow={1}>
@@ -57,13 +57,12 @@ const Dashboard = () => {
                         Plant Progress
                     </Typography>
                     <PlantProgress />
-                 </Box>
+                </Box>
                 <hr/>
 
                 <Box mt={4} flexGrow={1}>
                     <DataTable />
-                    </Box>
-
+                </Box>
 
             </Box>
         </Container>
