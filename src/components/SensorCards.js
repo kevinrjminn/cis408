@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Grid, Card, CardContent, Typography } from '@mui/material';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label } from 'recharts';
 import { Grid, Card, CardContent, Typography, useMediaQuery } from '@mui/material';
 
@@ -8,7 +7,7 @@ const SensorCards = ({ sensorData }) => {
 
     return (
         <Grid container spacing={4}>
-            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
+            <Grid item xs={12}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Humidity</Typography>
@@ -29,7 +28,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
+            <Grid item xs={12}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">pH Level</Typography>
@@ -50,7 +49,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
+            <Grid item xs={12}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Nutrient Level</Typography>
@@ -71,7 +70,7 @@ const SensorCards = ({ sensorData }) => {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={isLargeScreen ? 6 : 6} md={isLargeScreen ? 4 : 4}>
+            <Grid item xs={12}>
                 <Card>
                     <CardContent>
                         <Typography variant="h6">Temperature</Typography>

@@ -41,7 +41,7 @@ const Dashboard = () => {
     }, []);
     return (
         <Container maxWidth={isLargeScreen ? false : 'lg'}>
-            <Sidebar />
+            {/*<Sidebar />*/}
             <Box sx={{ paddingTop:'66px',paddingLeft: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}> {/* Update paddingLeft value to match drawerWidth */}
                 <Typography variant="h4" align="center" gutterBottom>
                     Hydroponic Monitoring Dashboard

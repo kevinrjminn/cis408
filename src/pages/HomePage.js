@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../styles/HomePage.module.css";
 import Container from "@mui/material/Container";
 import rockwellLogo from "../assets/images/rockwell.png";
+import macImage from "../assets/images/mac.png";
+
 
 const HomePage = () => {
     return (
@@ -53,7 +55,11 @@ const HomePage = () => {
                     <div className={styles.cardContent}>
                         <h2 className={styles.cardTitle}>Data Transfer & IoT Integration</h2>
                         <p className={styles.description}>
-                            Our web application is engineered to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data packets. This offers the utmost flexibility and customization to cater to your unique requirements.                        </p>
+                            Our web application is designed to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data packets. This offers the utmost flexibility and customization to cater to your unique requirements.                        </p>
+                        <img src={'macImage'} alt="Mac" className={styles.macImage} /> {
+
+                    }
+
                     </div>
                 </Container>
             </div>

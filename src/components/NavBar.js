@@ -5,9 +5,9 @@ import logo from '../assets/images/CSU-logo.png';
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Dashboard', path: '/dashboard' },
+    { name: 'Dashboard', path: '/dashboard'},
     { name: 'About', path: '#' },
-    { name: 'Team Info', path: '/team-info' }
+    // { name: 'Team Info', path: '/team-info' }
 ];
 
 function NavBar() {
