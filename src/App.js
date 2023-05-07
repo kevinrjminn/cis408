@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { Box, Container, Grid } from '@mui/material'; // Remove Hidden import
+import { Box, Container, Grid } from '@mui/material';
 import Dashboard from './components/Dashboard';
 import HomePage from './pages/HomePage';
 import NavBar from './components/NavBar';
 import TeamPage from "./pages/TeamPage";
 import AwardPage from './pages/AwardPage';
-
+import ContactPage from './pages/ContactPage'; // Import the ContactPage component
 
 const AppContent = () => {
     const location = useLocation();
@@ -20,11 +20,9 @@ const AppContent = () => {
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="/dashboard" element={<Dashboard />} />
 
-                        <Route path="/TeamPage" element={<TeamPage/>} />*/}
+                        <Route path="/TeamPage" element={<TeamPage />} />
                         <Route path="/awards" element={<AwardPage />} />
-                        {
-
-                        }
+                        <Route path="/contact" element={<ContactPage />} /> {/* Add the new route for ContactPage */}
                     </Routes>
                 </Grid>
             </Grid>

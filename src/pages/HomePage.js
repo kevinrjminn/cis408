@@ -5,6 +5,8 @@ import rockwellLogo from "../assets/images/rockwell.png";
 import forkfarmsLogo from "../assets/images/ForkFarms.png";
 import CSULogo from "../assets/images/CSU-logo.png";
 import {Grid} from "@mui/material";
+import Footer from '../components/Footer.js';
+
 
 
 const HomePage = () => {
@@ -125,10 +127,14 @@ const HomePage = () => {
             </div>
             <div className={styles.footer}>
                 <Container maxWidth="md">
-                    <p className={styles.footerText}>
-                    </p>
+                    {/*<div id="contact" className={styles.footer}>*/}
+                    {/*    <nav className={styles.footerNav}>*/}
+                    {/*        <a href="#contact">Contact</a> /!* Update the href attribute *!/*/}
+                    {/*    </nav>*/}
+                    {/*</div>*/}
                 </Container>
             </div>
+
         </div>
     );
 };
