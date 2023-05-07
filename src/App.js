@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import { Box, Container, Grid } from '@mui/material'; // Remove Hidden import
 import Dashboard from './components/Dashboard';
 import HomePage from './pages/HomePage';
-import TeamInfoPage from './pages/TeamInfoPage';
 import NavBar from './components/NavBar';
+import TeamPage from "./pages/TeamPage";
+import AwardPage from './pages/AwardPage';
+
 
 const AppContent = () => {
     const location = useLocation();
@@ -17,8 +19,12 @@ const AppContent = () => {
                         {/* Add routes for different pages */}
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="/dashboard" element={<Dashboard />} />
-                        <Route path="/team-info" element={<TeamInfoPage />} />
-                        {/* ... other routes */}
+
+                        <Route path="/TeamPage" element={<TeamPage/>} />*/}
+                        <Route path="/awards" element={<AwardPage />} />
+                        {
+
+                        }
                     </Routes>
                 </Grid>
             </Grid>

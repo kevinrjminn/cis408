@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import logo from '../assets/images/CSU-logo.png';
+import '../App.css';
 
 const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Dashboard', path: '/dashboard'},
-    { name: 'About', path: '#' },
-    // { name: 'Team Info', path: '/team-info' }
+    { name: 'TeamPage', path: '/TeamPage' },
+    { name: 'Awards', path: '/awards' },
+
 ];
 
 function NavBar() {
@@ -16,7 +18,10 @@ function NavBar() {
     return (
         <Navbar
             expand="md"
-            bg="dark"
+            bg ="dark"
+            bg ="dark"
+
+            className="custom-navbar-bg"
             variant="dark"
             fixed="top"
             expanded={expanded}

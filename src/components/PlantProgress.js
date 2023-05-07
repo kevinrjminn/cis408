@@ -9,10 +9,10 @@ import romaineIcon from '../assets/icons/maror.png'; // Replace with the Romaine
 import cherryTomatoIcon from '../assets/icons/parsley.png'; // Replace with the Cherry Tomato icon if available
 
 const allPlants = [
-    { name: 'Tomato', icon: tomatoIcon },
+    { name: 'Tomato', icon: lettuceIcon },
     { name: 'Lettuce', icon: lettuceIcon },
-    { name: 'Romaine', icon: romaineIcon },
-    { name: 'Cherry Tomato', icon: cherryTomatoIcon },
+    { name: 'Romaine', icon: lettuceIcon },
+    { name: 'Cherry Tomato', icon: lettuceIcon },
 ];
 
 function PlantProgress() {

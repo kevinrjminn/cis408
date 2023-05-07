@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../styles/HomePage.module.css";
 import Container from "@mui/material/Container";
 import rockwellLogo from "../assets/images/rockwell.png";
-import macImage from "../assets/images/mac.png";
+import forkfarmsLogo from "../assets/images/ForkFarms.png";
+import CSULogo from "../assets/images/CSU-logo.png";
 import {Grid} from "@mui/material";
 
 
@@ -18,11 +19,12 @@ const HomePage = () => {
                             <iframe
                                 width="560"
                                 height="315"
-                                src="https://www.youtube.com/embed/6udSInwofSU?start=10&end=300&autoplay=1&loop=1&playlist=6udSInwofSU&mute=1&playsinline=1&controls=0&modestbranding=1&iv_load_policy=3"
-                                title="video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                src="https://www.youtube.com/embed/5-RZWJoRj10?playlist=5-RZWJoRj10&autoplay=1&loop=1&start=2"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
-                                playsInline
+                                playsinline
                             ></iframe>
                         </div>
                         <h2 className={styles.subtitle}>
@@ -63,9 +65,9 @@ const HomePage = () => {
                         <h2 className={styles.cardTitle}>Data Transfer & IoT Integration</h2>
                         <p className={styles.description}>
                             Our web application is designed to facilitate smooth data transfers to any selected IoT platform, enabling data access and engagement through mobile apps or cloud-based web applications. Taking advantage of IoT protocols like MQTT and conventional APIs, our devices are capable of integrating with a range of open platforms for data analysis and response to incoming data. This enables flexibility and customization to cater to your unique requirements.                        </p>
-                        <img src={'macImage'} alt="Mac" className={styles.macImage} /> {
 
-                    }
+                        {
+                        }
 
                     </div>
                 </Container>
@@ -104,6 +106,16 @@ const HomePage = () => {
                     <h2 className={styles.sponsorsTitle}>Our Sponsors</h2>
                     <div className={styles.sponsorLogos}>
                         <img
+                            src={forkfarmsLogo}
+                            alt="Fork Farms Logo"
+                            className={styles.sponsorLogo}
+                        />
+                        <img
+                            src={CSULogo}
+                            alt="CSU Logo"
+                            className={styles.sponsorLogo}
+                        />
+                        <img
                             src={rockwellLogo}
                             alt="Rockwell Automation Logo"
                             className={styles.sponsorLogo}
@@ -122,3 +134,6 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
+

@@ -25,13 +25,28 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #6a6d6b;
+  color: #007500;
   height: 50px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1030;
+}
+
+.custom-navbar-bg {
+  background-color: #21B6A8;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .App-link {
