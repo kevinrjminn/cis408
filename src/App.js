@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import NavBar from './components/NavBar';
 import TeamPage from "./pages/TeamPage";
 import AwardPage from './pages/AwardPage';
-import ContactPage from './pages/ContactPage'; // Import the ContactPage component
+import ContactPage from './pages/ContactPage';
 
 const AppContent = () => {
     const location = useLocation();
